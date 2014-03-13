@@ -1,0 +1,94 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.8.+'
+    }
+}
+apply plugin: 'android'
+
+repositories {
+    mavenCentral()
+}
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.0.0"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 16
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    productFlavors {
+        nativeFlavor {
+            proguardFile 'proguard-rules.txt'
+        }
+
+        demoFlavor {
+
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+
+    }
+
+    lintOptions {
+        //abortOnError false
+        disable 'InvalidPackage'
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:+'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.8.+'
+    }
+}
+
+apply plugin: 'android'
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+  //  provided fileTree(dir: 'externaljars', include: 'classes.jar')
+    compile 'com.android.support:support-v4:19.0.0'
+    compile 'com.android.support:appcompat-v7:19.0.0'
+    compile 'com.android.support:support-v13:+'
+    //compile fileTree(dir: 'externaljars', include: '*.jar')
+    //compile project(':LowLevelTests')
+    //compile project(':Common')
+    compile project(':SpectrumAnalysis')
+    compile project(':AndroidEssentials')
+    //compile project(':Plotter')
+}
+
+
+
