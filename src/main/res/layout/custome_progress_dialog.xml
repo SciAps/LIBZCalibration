@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/New_Gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/L_Gray"
+            android:text="Calibrating"
+            android:textSize="26sp" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher"
+            android:padding="10dp"
+            android:scaleType="fitEnd"
+            android:layout_gravity="right" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/New_D_Gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/L_Gray"
+            android:textSize="22sp"
+            android:text="Testing:" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/L_Gray"
+            android:textSize="22sp"
+            android:text="Aluminum Alloy 1050" />
+    </LinearLayout>
+
+    <!--<ProgressBar-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:layout_margin="10dp"-->
+        <!--android:indeterminateDrawable="@drawable/zspinner"-->
+        <!--android:indeterminate="false" />-->
+
+
+    <!--<ProgressBar-->
+    <!--style="?android:attr/progressBarStyleHorizontal"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="20dp"-->
+    <!--android:layout_marginRight="20dp"-->
+    <!--android:id="@+id/progressBar"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:progress="4"/>-->
+</LinearLayout>
