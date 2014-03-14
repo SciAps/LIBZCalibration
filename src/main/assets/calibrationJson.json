@@ -1,0 +1,22 @@
+
+       [
+                   {
+                       "name": "alloy1",
+                       "numberOfShots": 2,
+                       "timePerShot": 1.2,
+                       "cleaningShot": 2
+                   },
+                   {
+                       "name": "alloy2",
+                       "numberOfShots": 2,
+                       "timePerShot": 1.2,
+                       "cleaningShot": 2
+                   },
+                   {
+                       "name": "alloy3",
+                       "numberOfShots": 4,
+                       "timePerShot": 1.2,
+                       "cleaningShot": 2
+                   }
+               ]
+
