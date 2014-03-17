@@ -18,7 +18,7 @@ android {
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 16
+        targetSdkVersion 19
         versionCode 1
         versionName "1.0"
     }
@@ -29,15 +29,6 @@ android {
         }
     }
 
-    productFlavors {
-        nativeFlavor {
-            proguardFile 'proguard-rules.txt'
-        }
-
-        demoFlavor {
-
-        }
-    }
 
     packagingOptions {
         exclude 'META-INF/LICENSE.txt'
@@ -58,34 +49,10 @@ dependencies {
     compile 'com.android.support:appcompat-v7:+'
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile project(':Common')
-
-}
-
-
-
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:0.8.+'
-    }
-}
-
-apply plugin: 'android'
-
-repositories {
-    mavenCentral()
-}
-
-
-dependencies {
     compile 'com.android.support:support-v4:19.0.0'
     compile 'com.android.support:appcompat-v7:19.0.0'
     compile 'com.android.support:support-v13:+'
     compile 'com.google.inject:guice:2.0-no_aop'
-
 }
-
 
 
