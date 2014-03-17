@@ -22,7 +22,7 @@
         <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="0dp"
-            android:layout_weight="3"
+            android:layout_weight="1"
             android:padding="10dp"
             android:background="#222222">
 
@@ -60,7 +60,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:background="@drawable/laser1_gray">
 
 
@@ -91,6 +91,7 @@
                     />
 
                 <TextView
+                    android:id="@+id/alloyName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Copper 1234"
@@ -99,7 +100,26 @@
                     android:typeface="monospace"
 
                     android:textColor="@color/L_Gray" />
+                <TextView
+                    android:id="@+id/txt_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not Calibrated"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
 
+                    android:textColor="@color/L_Gray" />
+
+                <TextView
+                    android:id="@+id/txt_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:textColor="@color/L_Gray" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -120,7 +140,7 @@
 
                     <Button
 
-                        android:id="@+id/test"
+                        android:id="@+id/btn_test"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
 
@@ -150,7 +170,7 @@
 
                     <Button
 
-                        android:id="@+id/test"
+                        android:id="@+id/btn_skip"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
 
@@ -174,11 +194,10 @@
     </LinearLayout>
 
 
-    <fragment
-        android:id="@+id/navigation_drawer"
+    <fragment  android:id="@+id/navigation_drawer"
         android:layout_width="@dimen/navigation_drawer_width"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:name="com.sciaps.android.libscalibrate.NavigationDrawerFragment" />
+        android:name="com.sciaps.android.libscalibrate.fragments.NavigationDrawerFragment" />
 
 </android.support.v4.widget.DrawerLayout>

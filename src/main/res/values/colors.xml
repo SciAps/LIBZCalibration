@@ -9,6 +9,8 @@
     <color name="Blue">#0099cc</color>
     <color name="L_Green">#99cc00</color>
     <color name="Green">#669900</color>
+    <color name="D_Green">#406000</color>
+
     <color name="D_Red">#990000</color>
     <color name="L_Red">#ff4444</color>
     <color name="Red">#cc0000</color>

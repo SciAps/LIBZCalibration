@@ -20,20 +20,38 @@
             android:text="Calibrating"
             android:textSize="26sp" />
 
-        <ImageView
-            android:id="@+id/image"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher"
-            android:padding="10dp"
-            android:scaleType="fitEnd"
-            android:layout_gravity="right" />
+            android:gravity="center_vertical">
+
+
+            <ProgressBar
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentEnd="true"
+
+                />
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_launcher"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="right" />
+
+        </RelativeLayout>
+
     </LinearLayout>
 
-    <View
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:background="@color/New_D_Gray" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -62,11 +80,11 @@
     </LinearLayout>
 
     <!--<ProgressBar-->
-        <!--android:layout_width="100dp"-->
-        <!--android:layout_height="100dp"-->
-        <!--android:layout_margin="10dp"-->
-        <!--android:indeterminateDrawable="@drawable/zspinner"-->
-        <!--android:indeterminate="false" />-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="100dp"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:indeterminateDrawable="@drawable/zspinner"-->
+    <!--android:indeterminate="false" />-->
 
 
     <!--<ProgressBar-->

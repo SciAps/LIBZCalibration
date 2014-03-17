@@ -1,4 +1,4 @@
-package com.sciaps.android.libscalibrate;
+package com.sciaps.android.libscalibrate.fragments;
 
 
 import android.app.ActionBar;
@@ -20,6 +20,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.sciaps.android.libscalibrate.CalibrationListAdapter;
+import com.sciaps.android.libscalibrate.R;
+import com.sciaps.android.libscalibrate.data.CalibrationAlloy;
 
 /**
  * Fragment used for managing interactions for and presentation of a navigation drawer.
@@ -75,7 +79,6 @@ public class NavigationDrawerFragment extends Fragment {
         }
 
         // Select either the default item (0) or the last selected item.
-        selectItem(mCurrentSelectedPosition);
     }
 
     @Override
@@ -83,6 +86,8 @@ public class NavigationDrawerFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         // Indicate that this fragment would like to influence the set of actions in the action bar.
         setHasOptionsMenu(true);
+        selectItem(mCurrentSelectedPosition);
+
     }
 
     @Override
@@ -123,8 +128,6 @@ public class NavigationDrawerFragment extends Fragment {
         CalibrationListAdapter adapter = new CalibrationListAdapter(getActivity(),android.R.layout.simple_list_item_activated_2,calibrations);
         mDrawerListView.setAdapter(adapter);
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
-
-
 
 
         ActionBar actionBar = getActionBar();
@@ -187,7 +190,7 @@ public class NavigationDrawerFragment extends Fragment {
         mDrawerLayout.setDrawerListener(mDrawerToggle);
     }
 
-    private void selectItem(int position) {
+    public void selectItem(int position) {
         mCurrentSelectedPosition = position;
         if (mDrawerListView != null) {
             mDrawerListView.setItemChecked(position, true);

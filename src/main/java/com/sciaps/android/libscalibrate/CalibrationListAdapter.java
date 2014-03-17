@@ -7,6 +7,12 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.sciaps.android.libscalibrate.data.CalibrationAlloy;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * Created by MonkeyFish on 1/22/14.
  */
@@ -33,14 +39,27 @@ public class CalibrationListAdapter extends ArrayAdapter<CalibrationAlloy> {
         CalibrationAlloy calibrationAlloy = items[position];
 
 
-        TextView tt = (TextView) v.findViewById(android.R.id.text1);
-        if (tt != null) {
-            tt.setText(calibrationAlloy.name);
+        TextView t1 = (TextView) v.findViewById(android.R.id.text1);
+        if (t1 != null) {
+            t1.setText(calibrationAlloy.name);
+            TextView t2 = (TextView) v.findViewById(android.R.id.text2);
 
             if (calibrationAlloy.wasTaken) {
-                tt.setTextColor(getContext().getResources().getColor(R.color.L_Green));
+                t1.setTextColor(getContext().getResources().getColor(R.color.D_Green));
+
+                DateFormat df = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
+
+
+                Date taken = new Date(calibrationAlloy.takenDateMS);
+                t2.setText(df.format(taken.getTime()));
+                t2.setTextColor(getContext().getResources().getColor(R.color.D_Green));
+
+
+
             } else {
-                tt.setTextColor(getContext().getResources().getColor(R.color.L_Red));
+                t1.setTextColor(getContext().getResources().getColor(R.color.L_Red));
+                t2.setText("");
+                t2.setTextColor(getContext().getResources().getColor(R.color.L_Red));
 
             }
         }

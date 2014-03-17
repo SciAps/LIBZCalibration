@@ -4,7 +4,6 @@ package com.sciaps.android.libscalibrate.fragments;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,6 +26,8 @@ public class CustomeDialogFragment extends DialogFragment {
     public CustomeDialogFragment(String title, String message) {
         this.title = title;
         this.message = message;
+
+
     }
 
     public CustomeDialogFragment(int title, int message) {
@@ -44,19 +45,7 @@ public class CustomeDialogFragment extends DialogFragment {
 
         View v = inflater.inflate(R.layout.custome_progress_dialog, null);
         ((TextView) v.findViewById(R.id.header)).setText(title);
-        builder.setView(v)
-                .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                    }
-                })
-                .setNeutralButton(R.string.skip, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                    }
-                })
-                .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                    }
-                });
+        builder.setView(v);
 
         return builder.create();
     }
